@@ -34,15 +34,10 @@
 
 <code>
 admin:admin
-
 tomcat:tomcat
-
 admin:[NOTHING]
-
 admin:s3cr3t
-
 tomcat:s3cr3t
-
 admin:tomcat
 </code>
 
