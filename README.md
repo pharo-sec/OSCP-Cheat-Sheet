@@ -32,14 +32,12 @@
 
 #### Default Credentials
 
-<code>
-admin:admin
-tomcat:tomcat
-admin:[NOTHING]
-admin:s3cr3t
-tomcat:s3cr3t
-admin:tomcat
-</code>
+<code>admin:admin</code>
+<code>tomcat:tomcat</code>
+<code>admin:[NOTHING]</code>
+<code>admin:s3cr3t</code>
+<code>tomcat:s3cr3t</code>
+<code>admin:tomcat</code>
 
 ## FTP 
 
