@@ -10,7 +10,7 @@
 
 <code>nmap -sU -v -sS -sC -sV -T4 -Pn -oA nmap/[filename.udp] [IP]</code>
 
-### SMB/Samba
+## SMB/Samba
 
 <code>nmap -p 139,445 -Pn -script=smb-vuln* [IP]</code>
 
@@ -22,7 +22,7 @@
 
 <code>./smbver.sh [IP]</code> [Found Here](https://github.com/rewardone/OSCPRepo/blob/master/scripts/recon_enum/smbver.sh)
 
-### Werb Server
+## Werb Server
 
 <code>dirb [URL]</code>
 
