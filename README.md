@@ -28,6 +28,24 @@
 
 <code>nikto -h [URL]</code>
 
+### Tomcat
+
+#### Default Credentials
+
+<code>
+admin:admin
+
+tomcat:tomcat
+
+admin:[NOTHING]
+
+admin:s3cr3t
+
+tomcat:s3cr3t
+
+admin:tomcat
+</code>
+
 ## FTP 
 
 ### Brute Force
@@ -38,21 +56,21 @@
 
 <code>ftp [IP]</code>
 
-<code>PASSIVE</code>
+<code>>PASSIVE</code>
 
-<code>BINARY</code>
+<code>>BINARY</code>
 
-<code>get [FILE]</code>
+<code>>get [FILE]</code>
 
 ### Upload
 
 <code>ftp [IP]</code>
 
-<code>PASSIVE</code>
+<code>>PASSIVE</code>
 
-<code>BINARY</code>
+<code>>BINARY</code>
 
-<code>put [FILE]</code>
+<code>>put [FILE]</code>
 
 
 ## Exploitation
