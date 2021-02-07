@@ -1,12 +1,12 @@
 # OSCP-Cheat-Sheet
 
-### NMAP
+## NMAP
 
-#### TCP 
+### TCP 
 
 <code>nmap -v -sS -sC -sV -T4 -Pn -oA nmap/[filename.tcp] -p- [IP]</code>
 
-#### UDP
+### UDP
 
 <code>nmap -sU -v -sS -sC -sV -T4 -Pn -oA nmap/[filename.udp] [IP]</code>
 
@@ -28,13 +28,13 @@
 
 <code>nikto -h [URL]</code>
 
-### FTP 
+## FTP 
 
-## Brute Force
+### Brute Force
 
 <code>hydra -V -f -L [USER_LIST] -P [PASSWORDS_LIST] ftp://[IP] -u -vV</code>
 
-## Download
+### Download
 
 <code>ftp [IP]</code>
 
@@ -44,7 +44,7 @@
 
 <code>get [FILE]</code>
 
-## Upload
+### Upload
 
 <code>ftp [IP]</code>
 
