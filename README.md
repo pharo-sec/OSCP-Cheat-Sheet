@@ -148,6 +148,20 @@ Use listener
 
 <code>nc -lnvp [PORT]</code>
 
+## Linux Privilege Escalation
+
+### Priv Esc Scripts
+
+<code>LinPEAS.sh</code> Found [here](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+
+<code>LinEnum.sh</code> Found [here](https://github.com/rebootuser/LinEnum)
+
+### SUID Binaries
+
+- [GTFOBins](https://gtfobins.github.io/)
+- [Priv Esc with SUIDs](https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/)
+
+
 ## Windows Privilege Escalation
 
 ### Juicy Potato
