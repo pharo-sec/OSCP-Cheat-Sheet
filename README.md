@@ -2,17 +2,15 @@
 
 ## Common Commands
 
-### Python 
+Uploading a file with PUT: <code>curl -X PUT http://[IP]/[FILE] -d @[FILE]  -v</code>
 
 Python HTTP Server: <code>python -m SimpleHTTPServer [PORT]</code>
 
 Python FTP Server: <code>python -m pyftpdlib -p 21</code>
 
-### Netcat Listener
+Linux Listener: <code>nc -lnvp [PORT]</code>
 
-Linux: <code>nc -lnvp [PORT]</code>
-
-Windows: <code>nc.exe -lnvcp [PORT]</code>
+Windows Listener: <code>nc.exe -lnvcp [PORT]</code>
 
 ### Upload / Download files with Netcat
 
@@ -67,6 +65,14 @@ Hit Return 2x
 <code>smbmap -H [IP]</code>
 
 <code>./smbver.sh [IP]</code> [Found Here](https://github.com/rewardone/OSCPRepo/blob/master/scripts/recon_enum/smbver.sh)
+
+Logging into SMB Share
+
+<code>smbclient //[IP]/[SHARE] 
+
+Downloading all files from a directory
+
+<code>smbclient //[IP]/[SHARE] -U [USER] -c "prompt OFF;recurse ON;mget *"</code>
 
 ## Werb Servers
 
