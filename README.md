@@ -4,7 +4,17 @@
 
 <code>python -m SimpleHTTPServer [PORT]</code>
 
-### Upgrading Reverse Shell
+### Netcat Listener
+
+Linux: <code>nc -lnvp [PORT]</code>
+
+Windows: <code>nc.exe -lnvcp [PORT]</code>
+
+## Reverse Shells
+
+[Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+
+### Upgrading Reverse Shells
 
 Follow steps found [here](https://medium.com/bugbountywriteup/pimp-my-shell-5-ways-to-upgrade-a-netcat-shell-ecd551a180d2)
 
@@ -19,16 +29,6 @@ Background the shell with <code>Ctrl+Z</code>
 Foreground the shell with <code>fg</code> 
 
 Hit Return 2x
-
-### Netcat Listener
-
-Linux: <code>nc -lnvp [PORT]</code>
-
-Windows: <code>nc.exe -lnvcp [PORT]</code>
-
-## Reverse Shells
-
-[Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
 
 ### Netcat
 
