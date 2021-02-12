@@ -245,6 +245,7 @@ Use listener
 ### SUID Binaries
 
 - [GTFOBins](https://gtfobins.github.io/)
+
 - [Priv Esc with SUIDs](https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/)
 
 ## Windows Privilege Escalation
