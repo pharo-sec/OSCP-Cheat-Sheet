@@ -26,7 +26,7 @@
 
 4. [SNMP](#snmp)
 
-    - [Windows SNMP MIB Values](#windows-snmp-mib-values)
+    - [SNMP MIB Values](#snmp-mib-values)
 
 5. [Web Servers](#web-servers)
 
@@ -204,7 +204,9 @@ Hit Return 2x
 
 <code>snmpbulkwalk -c [COMMUNITY_STRING] -v[VERSION] [IP]</code>
 
-### Windows SNMP MIB Values
+<code>snmpwalk -c [COMMUNITY_STRING] -v[VERSION] [IP] [MIB_VALUE]</code>
+
+### SNMP MIB Values
 
 System Processes: <code>1.3.6.1.2.1.25.1.6.0</code>
 
