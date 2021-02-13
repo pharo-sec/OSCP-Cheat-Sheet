@@ -27,7 +27,7 @@
 4. [SNMP](#snmp)
 
     - [MIB Values](#mib-values)
-    
+
 5. [Web Servers](#web-servers)
 
     - [Wordlists](#wordlists)
@@ -237,6 +237,8 @@ Software Name: <code>1.3.6.1.2.1.25.6.3.1.2</code>
 User Accounts: <code>1.3.6.1.4.1.77.1.2.25</code>
 
 TCP Local Ports: <code>1.3.6.1.2.1.6.13.1.3</code>
+
+<code>snmpwalk -c [COMMNITY_STRING] -v[SNMP_VERSION] [IP] [MIB_VALUE]</code> 
 
 ## Werb Servers
 
