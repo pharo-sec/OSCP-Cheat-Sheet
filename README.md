@@ -24,7 +24,9 @@
 
 3. [SMB/Samba](#smbsamba)
 
-4. [Web Servers](#web-servers)
+4. [SNMP](#snmp)
+
+5. [Web Servers](#web-servers)
 
     - [Wordlists](#wordlists)
 
@@ -40,7 +42,7 @@
     
     - [Local File Inclusion / Remote File Inclusion](#local-file-inclusion--remote-file-inclusion-lfi--rfi)
 
-5. [FTP](#ftp)
+6. [FTP](#ftp)
 
     - [Bruteforce](#bruteforce)
 
@@ -48,7 +50,7 @@
 
     - [Upload](#upload)
 
-6. [SMB Exploitation](#smb-exploitation)
+7. [SMB Exploitation](#smb-exploitation)
 
     - [Eternal Blue (MS17-010)](#eternal-blue-ms17-010)
 
@@ -58,13 +60,13 @@
 
         - [Payloads](#payloads)
 
-7. [Linux Privilege Escalation](#linux-privilege-escalation)
+8. [Linux Privilege Escalation](#linux-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts)
 
     - [SUID Binaries](#suid-binaries)
 
-8. [Windows Privilege Escalations](#windows-privilege-escalation)
+9. [Windows Privilege Escalations](#windows-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts-1)
 
@@ -80,7 +82,7 @@
 
         - [Windows XP SP0/SP1](#windows-xp-sp0sp1)
 
-9. [MSFvenom Payloads](#msfvenom-payloads)
+10. [MSFvenom Payloads](#msfvenom-payloads)
 
     - [Linux](#linux)
 
@@ -211,6 +213,8 @@ Logging into SMB Share
 Downloading all files from a directory
 
 <code>smbclient //[IP]/[SHARE] -U [USER] -c "prompt OFF;recurse ON;mget *"</code>
+
+## SNMP
 
 ## Werb Servers
 
