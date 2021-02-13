@@ -6,7 +6,7 @@
 
     - [Download Files with PowerShell](#upload--download-files-with-netcat)
 
-    - [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
+    - [Upload / Download Files with Netcat](#download-files-with-powershell)
 
     - [Netcat](#netcat)
 
@@ -15,6 +15,18 @@
     - [Upgrading Reverse Shells](#upgrading-reverse-shells)
 
 2. [NMAP](#nmap)
+
+    - [Common Switches](#common-switches)
+
+    - [TCP Scan](#tcp-scan)
+
+    - [UDP Scan](#udp-scan)
+
+3. [SMB/Samba](#smbsamba)
+
+4. [Web Servers](#web-servers)
+
+
 
 
 ## Common Commands
