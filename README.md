@@ -1,12 +1,12 @@
 # OSCP-Cheat-Sheet
 
-[Common Commands](https://github.com/pharo-sec/OSCP-Cheat-Sheet#common-commands)
+1. [Common Commands](#common-commands)
  
-1. [Downloading Files (Curl / Wget)](https://github.com/pharo-sec/OSCP-Cheat-Sheet#downloading-files-curl--wget)
+- [Downloading Files (Curl / Wget)](#downloading-files-curl--wget)
 
-2. [Download Files with PowerShell](https://github.com/pharo-sec/OSCP-Cheat-Sheet#upload--download-files-with-netcat)
+- [Download Files with PowerShell](#upload--download-files-with-netcat)
 
-3. [Downloading Files with Netcat](#upload--download-files-with-netcat)
+- [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
 
 
 ## Common Commands
