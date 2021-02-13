@@ -58,11 +58,35 @@ Hit Return 2x
 
 ## NMAP
 
-### TCP 
+### Common Switches
+
+<code>-A</code>: OS Fingerprinting
+
+<code>-O</code>: OS Detection
+
+<code>-sV</code>: Service Version/Enumeration
+
+<code>-sC</code>: Enables Safe Scripts
+
+<code>-Pn</code>: Avoids Ping Scans
+
+<code>-sS</code>: Stealth Scan / SYN Scan
+
+<code>-sU</code>: UDP Scan
+
+<code>-v/-vv/-vvv</code>: Varying Levels of Verbosity
+
+<code>-T[1-5]</code>: Speed of Scan (5 Being the Fastest)
+
+<code>-p [PORT(S)]</code>: Specify Port, or Porvide Comma Seperated List of Ports
+
+<code>-p-</code>: Full Port Scan
+
+### TCP Scan
 
 <code>nmap -v -sS -sC -sV -T4 -Pn -oA nmap/[filename.tcp] -p- [IP]</code>
 
-### UDP
+### UDP Scan
 
 <code>nmap -sU -v -sS -sC -sV -T4 -Pn -oA nmap/[filename.udp] [IP]</code>
 
