@@ -36,9 +36,19 @@
 
         - [Uploading to Tomcat6](#uploading-to-tomcat6)
 
-        - [Uploading to Tomcat7 and Above](#uploading-to-tomat7-and-above)
+        - [Uploading to Tomcat7 and Above](#uploading-to-tomcat7-and-above)
     
     - [Local File Inclusion / Remote File Inclusion](#local-file-inclusion--remote-file-inclusion-lfi--rfi)
+
+5. [FTP](#ftp)
+
+    - [Bruteforce](#bruteforce)
+
+    - [Download](#download)
+
+    - [Upload](#upload)
+
+6. S[SMB Exploitation](#smb-exploitation)
 
 
 
@@ -214,7 +224,7 @@ Store in a file on local host, navigate to it via the web app and pass commands 
 
 ## FTP 
 
-### Brute Force
+### Bruteforce
 
 <code>hydra -V -f -L [USER_LIST] -P [PASSWORDS_LIST] ftp://[IP] -u -vV</code>
 
