@@ -2,11 +2,11 @@
 
 1. [Common Commands](#common-commands)
  
-- [Downloading Files (Curl / Wget)](#downloading-files-curl--wget)
+    - [Downloading Files (Curl / Wget)](#downloading-files-curl--wget)
 
-- [Download Files with PowerShell](#upload--download-files-with-netcat)
+    - [Download Files with PowerShell](#upload--download-files-with-netcat)
 
-- [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
+    - [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
 
 
 ## Common Commands
