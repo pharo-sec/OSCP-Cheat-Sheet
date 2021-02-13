@@ -8,6 +8,14 @@
 
     - [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
 
+    - [Netcat](#netcat)
+
+    - [Reverse Shells](#reverse-shells)
+
+    - [Upgrading Reverse Shells](#upgrading-reverse-shells)
+
+2. [NMAP](#nmap)
+
 
 ## Common Commands
 
