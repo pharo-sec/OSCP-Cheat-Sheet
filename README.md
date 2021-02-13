@@ -1,5 +1,11 @@
 # OSCP-Cheat-Sheet
 
+[Common Commands](https://github.com/pharo-sec/OSCP-Cheat-Sheet#common-commands)
+ 
+1. [Downloading Files (Curl / Wget)]https://github.com/pharo-sec/OSCP-Cheat-Sheet#downloading-files-curl--wget
+
+2. [Download Files with PowerShell]https://github.com/pharo-sec/OSCP-Cheat-Sheet#upload--download-files-with-netcat
+
 ## Common Commands
 
 Python HTTP Server: <code>python -m SimpleHTTPServer [PORT]</code>
