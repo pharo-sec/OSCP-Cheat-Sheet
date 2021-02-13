@@ -222,6 +222,8 @@ Downloading all files from a directory
 
 <code>onesixtyone -c [COMMNITY_STRING] -i [IPS]</code>
 
+<code>snmp-check [IP]</code>
+
 ### MIB Values
 
 System Processes: <code>1.3.6.1.2.1.25.1.6.0</code>
