@@ -75,7 +75,32 @@
         - [Generating the Payload](#generating-the-payload)
 
         - [Execution](#execution)
-        
+
+    - [Service Exploitation](#service-exploitation)
+
+        - [Windows XP SP0/SP1](#windows-xp-sp0sp1)
+
+9. [MSFvenom Payloads](#msfvenom-payloads)
+
+    - [Linux](#linux)
+
+    - [Windows](#windows)
+
+    - [PHP](#php)
+
+    - [JSP](#jsp)
+
+    - [WAR](#war)
+
+    - [ASP Payload](#asp-payload)
+
+    - [ASP.NET Payload](#aspnet-payload)
+
+    - [Python](#python)
+
+    - [Bash](#bash)
+
+    - [Perl](#perl)
 
 ## Common Commands
 
