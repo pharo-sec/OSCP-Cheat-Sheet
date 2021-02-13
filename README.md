@@ -26,6 +26,8 @@
 
 4. [SNMP](#snmp)
 
+    - [MIB Values](#mib-values)
+    
 5. [Web Servers](#web-servers)
 
     - [Wordlists](#wordlists)
@@ -215,6 +217,26 @@ Downloading all files from a directory
 <code>smbclient //[IP]/[SHARE] -U [USER] -c "prompt OFF;recurse ON;mget *"</code>
 
 ## SNMP
+
+<code>snmpwalk -c [COMMNITY_STRING] -v[SNMP_VERSION] [IP]</code>
+
+<code>onesixtyone -c [COMMNITY_STRING] -i [IPS]</code>
+
+### MIB Values
+
+System Processes: <code>1.3.6.1.2.1.25.1.6.0</code>
+
+Running Programs: <code>1.3.6.1.2.1.25.4.2.1.2</code>
+
+Processes Path: <code>1.3.6.1.2.1.25.4.2.1.4</code> 
+
+Storage Units: <code>1.3.6.1.2.1.25.2.3.1.4</code>
+
+Software Name: <code>1.3.6.1.2.1.25.6.3.1.2</code>
+
+User Accounts: <code>1.3.6.1.4.1.77.1.2.25</code>
+
+TCP Local Ports: <code>1.3.6.1.2.1.6.13.1.3</code>
 
 ## Werb Servers
 
