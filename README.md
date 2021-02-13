@@ -48,9 +48,34 @@
 
     - [Upload](#upload)
 
-6. S[SMB Exploitation](#smb-exploitation)
+6. [SMB Exploitation](#smb-exploitation)
 
+    - [Eternal Blue (MS17-010)](#eternal-blue-ms17-010)
 
+        - [Payload](#payload)
+
+    - [MS08-067](#ms08-067)
+
+        - [Payloads](#payloads)
+
+7. [Linux Privilege Escalation](#linux-privilege-escalation)
+
+    - [Enumeration Scripts](#enumeration-scripts)
+
+    - [SUID Binaries](#suid-binaries)
+
+8. [Windows Privilege Escalations](#windows-privilege-escalation)
+
+    - [Enumeration Scripts](#enumeration-scripts-1)
+
+    - [Juicy Potato](#juicy-potato)
+
+        - [Vulnerable OS Versions](#vulnerable-os-versions)
+
+        - [Generating the Payload](#generating-the-payload)
+
+        - [Execution](#execution)
+        
 
 ## Common Commands
 
