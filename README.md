@@ -26,6 +26,19 @@
 
 4. [Web Servers](#web-servers)
 
+    - [Wordlists](#wordlists)
+
+    - [Bruteforcing POST Requests](#bruteforcing-post-requests)
+
+    - [Tomcat](#tomcat)
+
+        - [Default Credentials](#default-credentials)
+
+        - [Uploading to Tomcat6](#uploading-to-tomcat6)
+
+        - [Uploading to Tomcat7 and Above](#uploading-to-tomat7-and-above)
+    
+    - [Local File Inclusion / Remote File Inclusion](#local-file-inclusion--remote-file-inclusion-lfi--rfi)
 
 
 
