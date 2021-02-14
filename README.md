@@ -124,11 +124,15 @@ Linux Listener: <code>nc -lnvp [PORT]</code>
 
 Windows Listener: <code>nc.exe -lnvcp [PORT]</code>
 
-Uploading a file with PUT: <code>curl -X PUT http://[IP]/[FILE] -d @[FILE]  -v</code>
+Searching for Exploits/Vulnerabilities: <code>searchsploit [APPLICATION]</code>
 
-### Downloading Files (Curl / Wget)
+Downloading Exploits From searchsploit <code>searchsploit -x [EXPLOIT_CODE] > [EXPLOIT.EXTENSION]</code>
+
+### Downloading / Uploading Files (Curl / Wget)
 
 <code>curl [URL] -o [FILENAME]</code>
+
+<code>curl -X PUT http://[IP]/[FILE] -d @[FILE]  -v</code>
 
 <code>wget [URL]</code>
 
