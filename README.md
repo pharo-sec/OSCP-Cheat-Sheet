@@ -170,7 +170,7 @@ Follow steps found [here](https://medium.com/bugbountywriteup/pimp-my-shell-5-wa
 
 Background the shell with <code>Ctrl+Z</code>
 
-<code>stty raw echo</code>
+<code>stty raw -echo</code>
 
 Foreground the shell with <code>fg</code> 
 
