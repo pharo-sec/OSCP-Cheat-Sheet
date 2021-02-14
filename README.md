@@ -56,7 +56,9 @@
 
     - [Upload](#upload)
 
-8. [SMB Exploitation](#smb-exploitation)
+8. [Kerberos](#kerberos)
+
+9. [SMB Exploitation](#smb-exploitation)
 
     - [Eternal Blue (MS17-010)](#eternal-blue-ms17-010)
 
@@ -66,13 +68,13 @@
 
         - [Payloads](#payloads)
 
-9. [Linux Privilege Escalation](#linux-privilege-escalation)
+10. [Linux Privilege Escalation](#linux-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts)
 
     - [SUID Binaries](#suid-binaries)
 
-10. [Windows Privilege Escalations](#windows-privilege-escalation)
+11. [Windows Privilege Escalations](#windows-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts-1)
 
@@ -88,7 +90,7 @@
 
         - [Windows XP SP0/SP1](#windows-xp-sp0sp1)
 
-11. [MSFvenom Payloads](#msfvenom-payloads)
+12. [MSFvenom Payloads](#msfvenom-payloads)
 
     - [Linux](#linux)
 
@@ -341,6 +343,10 @@ Store in a file on local host, navigate to it via the web app and pass commands 
 <code>>BINARY</code>
 
 <code>>put [FILE]</code>
+
+## Kerberos
+
+<code>https://www.tarlogic.com/en/blog/how-to-attack-kerberos/</code>
 
 ## SMB Exploitation
 
