@@ -38,6 +38,12 @@
 
     - [Bruteforcing POST Requests](#bruteforcing-post-requests)
 
+    - [WordPress](#wordpress)
+
+        - [Enumerate](#enumerate)
+
+        - [Bruteforce](#bruteforce)
+
     - [Tomcat](#tomcat)
 
         - [Default Credentials](#default-credentials)
@@ -50,7 +56,7 @@
 
 7. [FTP](#ftp)
 
-    - [Bruteforce](#bruteforce)
+    - [Bruteforce](#bruteforce-1)
 
     - [Download](#download)
 
@@ -279,6 +285,16 @@ TCP Local Ports: <code>1.3.6.1.2.1.6.13.1.3</code>
 ### Bruteforcing POST requests
 
 <code>hydra -l/-L [USERNAME/USER_LIST] -P [PASSWORDLIST] [IP] http-form-post "[ENDPOINT]:[POST_PARAMETERS]&User=^USER^&Password=^PASS^:[FAILED_LOGIN_ERROR]."</code>
+
+### WordPress
+
+#### Enumerate
+
+<code>wpscan --rua -e --url [URL]</code>
+
+#### Bruteforce
+
+<code>wpscan --rua --url [URL] -P [PASSWORDS_LIST] -U "[USER],[USER]"</code>
 
 ### Tomcat
 
