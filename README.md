@@ -6,7 +6,7 @@
 
     - [Download Files with PowerShell](#upload--download-files-with-netcat)
 
-    - [Upload / Download Files with Netcat](#download-files-with-powershell)
+    - [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
 
     - [Netcat](#netcat)
 
