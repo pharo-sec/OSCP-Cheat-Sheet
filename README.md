@@ -468,13 +468,13 @@ For Windows 7 SP1 x86 Build 7601 use the source code [here](https://github.com/i
 
 #### Vulnerable OS Versions
 
-> Windows 7 Enterprise
-> Windows 8.1 Enterprise
-> Windows 10 Enterprise
-> Windows 10 Professional
-> Windows Server 2008 R2 Enterprise
-> Windows Server 2012 Datacenter
-> Windows Server 2016 Standard
+- Windows 7 Enterprise
+- Windows 8.1 Enterprise
+- Windows 10 Enterprise
+- Windows 10 Professional
+- Windows Server 2008 R2 Enterprise
+- Windows Server 2012 Datacenter
+- Windows Server 2016 Standard
 
 #### Required Permissions
 
