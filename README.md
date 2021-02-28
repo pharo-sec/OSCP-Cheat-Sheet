@@ -477,6 +477,7 @@ For Windows 7 SP1 x86 Build 7601 use the source code [here](https://github.com/i
 - Windows Server 2016 Standard
 
 #### Required Permissions
+
 - <code>SeImpersonate</code>
 - <code>SeAssignPrimaryToken</code>
 
