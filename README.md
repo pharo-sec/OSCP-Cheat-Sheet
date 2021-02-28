@@ -1,4 +1,4 @@
-# OSCP-Cheat-Sheet
+# OSCP Cheat Sheet
 
 1. [Common Commands](#common-commands)
  
