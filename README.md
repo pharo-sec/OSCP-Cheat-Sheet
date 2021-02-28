@@ -442,6 +442,8 @@ Use listener
 
 <code>LinEnum.sh</code> Found [here](https://github.com/rebootuser/LinEnum)
 
+<code>linux-exploit-suggestor</code> Found [here](https://github.com/mzet-/linux-exploit-suggester)
+
 ### SUID Binaries
 
 - [GTFOBins](https://gtfobins.github.io/)
@@ -461,6 +463,8 @@ Use listener
 ### Juicy Potato
 
 Found [here](https://github.com/ohpe/juicy-potato) ([pre-compile binaries](https://github.com/ohpe/juicy-potato/releases))
+
+For Windows 7 SP1 x86 Build 7601 use the source code [here](https://github.com/ivanitlearning/Juicy-Potato-x86). This will need to be compiled in Visual Studio 2017
 
 #### Vulnerable OS Versions
 
