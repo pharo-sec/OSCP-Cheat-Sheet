@@ -22,6 +22,8 @@ Set a working directory for Mona from teh Immunity Debugger. Run the following c
 
 <code>!mona config -set workingfolder c:\mona\%p</code>
 
+![alt-text](src/Mona_Command.png)
+
 ### Fuzz the Application
 
 Launch Immunity Debugger as Administrator, and use the "File -> Open" command to bring up the vulnerable application. Notice that this does not run the aplication, it still needs to be executed. Click the red play button at the top of the window to execute the file. 
