@@ -1,22 +1,18 @@
 # Buffer Overflow
 
-## High Level Overview
-
-  1. Fuzz the Application
+1. [Fuzz the Application](#fuzzing-the-application)
   
-  2. Replicating the Crash
+2. [Replicating the Crash and Controlling EIP](#replicating-the-crash-and-controlling-eip)
 
-  3. Determine Offset and Test Return Address
+3. [Find Bad Characters](#finding-bad-characters)
 
-  4. Find Bad Characters
+4. Find the Jumpoint 
 
-  5. Find the Jumpoint 
+5. Generate the Payload
 
-  6. Generate the Payload
+6. Add Padding to Allow Shellcode to Unpack
 
-  7. Add Padding to Allow Shellcode to Unpack
-
-  8. Exploit
+7. Exploit
 
 Set a working directory for Mona from teh Immunity Debugger. Run the following command from the command line in Immunity Debugger
 
