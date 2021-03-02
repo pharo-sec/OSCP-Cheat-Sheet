@@ -21,4 +21,4 @@
 
 ### Fuzz the Application
 
-Use the program located [here](main/Buffer%20Overflow/fuzzer.py)
+Use the program located [here](/fuzzer.py)
