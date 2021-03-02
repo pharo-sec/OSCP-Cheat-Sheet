@@ -42,4 +42,37 @@ Use the program located [here](fuzzer.py) to fuzz the application. It will send 
 
 Make note of when the script stops/the application crashes and the length of the string that caused the crash.
 
-## Replicating the Crash
+## Replicating the Crash and Controlling EIP
+
+Use the program located [here](exploit.py) (This is the base script, we will modify it as needed with the information we acquire during the assessment of the application)
+
+We then need to generate a string of the length of the string that crashed the application + 400. In our case, the application crashed after the 2000 string, so we will generate our string to be size 2400
+
+<code>/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2400</code>
+
+Copy this output to the "payload" field in the exploit.py script
+
+Restart the application in the Immunity Debugger and run the exploit.py script.
+
+<code>python exploit.py</code>
+
+The app should crash again, run the following command in Immunity Debugger:
+
+<code>!mona findmsp -distance 2400</code>
+
+Note that we use the same length as the pattern we created earlier.
+
+Mona will display a window with some output in the form of:
+
+> EIP contains normal pattern: ... (offset XXXX)
+
+We will then need to update our exploit.py script and set the offset varialbe to the value of the offset. 
+
+Set the retn variable to "BBBB"
+
+Restart the application in Immunity Debugger and rerun the exploit.py script.
+
+We should see the EIP register is now 42424242 (BBBB)
+
+## Finding Bad Characters
+
