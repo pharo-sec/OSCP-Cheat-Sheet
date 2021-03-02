@@ -21,4 +21,4 @@
 
 ### Fuzz the Application
 
-Use the program located [here](https://github.com/pharo-sec/OSCP-Cheat-Sheet/blob/main/Buffer-Overflow/fuzzer.py)
+Use the program located [here](fuzzer.py)
