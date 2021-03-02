@@ -1,6 +1,6 @@
 # Buffer Overflow
 
-1. [Fuzz the Application](#fuzzing-the-application)
+1. [Fuzz the Application](#fuzz-the-application)
   
 2. [Replicating the Crash and Controlling EIP](#replicating-the-crash-and-controlling-eip)
 
