@@ -1,10 +1,10 @@
 # Buffer Overflow
 
-1. [Fuzz the Application](#fuzz-the-application)
+[1. Fuzz the Application](#fuzz-the-application)
   
-2. [Replicating the Crash and Controlling EIP](#replicating-the-crash-and-controlling-eip)
+[2. Replicating the Crash and Controlling EIP](#replicating-the-crash-and-controlling-eip)
 
-3. [Find Bad Characters](#finding-bad-characters)
+[3. Find Bad Characters](#finding-bad-characters)
 
 4. Find the Jumpoint 
 
