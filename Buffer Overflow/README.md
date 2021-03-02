@@ -4,7 +4,7 @@
 
   1. Fuzz the Application
   
-  2. Recreate the Crash with Targeted Payloads
+  2. Replicating the Crash
 
   3. Determine Offset and Test Return Address
 
@@ -24,7 +24,7 @@ Set a working directory for Mona from teh Immunity Debugger. Run the following c
 
 ![alt-text](src/Mona_Command.png)
 
-### Fuzz the Application
+## Fuzz the Application
 
 Launch Immunity Debugger as Administrator, and use the "File -> Open" command to bring up the vulnerable application. Notice that this does not run the aplication, it still needs to be executed.  
 
@@ -36,8 +36,10 @@ Click the red play button at the top of the window to execute the file
 
 Use the program located [here](fuzzer.py) to fuzz the application. It will send strings to the application incrementing by 500 characters each time until the app crashes or it reaches a string of length 3000.
 
+<code>python exploit.py</code>
+
 ![alt-text](src/Fuzzing.png)
 
 Make note of when the script stops/the application crashes and the length of the string that caused the crash.
 
-
+## Replicating the Crash
