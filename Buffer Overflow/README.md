@@ -46,6 +46,8 @@ Make note of when the script stops/the application crashes and the length of the
 
 Use the program located [here](exploit.py) (This is the base script, we will modify it as needed with the information we acquire during the assessment of the application)
 
+Note: that the prefix variable will need to be changed to account for whatever initial option the applications takes.
+
 We then need to generate a string of the length of the string that crashed the application + 400. In our case, the application crashed after the 2000 string, so we will generate our string to be size 2400
 
 <code>/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2400</code>
