@@ -36,7 +36,7 @@ Click the red play button at the top of the window to execute the file
 
 Use the program located [here](fuzzer.py) to fuzz the application. It will send strings to the application incrementing by 500 characters each time until the app crashes or it reaches a string of length 3000.
 
-<code>python exploit.py</code>
+<code>python fuzzer.py</code>
 
 ![alt-text](src/Fuzzing.png)
 
