@@ -46,6 +46,8 @@ We then need to generate a string of the length of the string that crashed the a
 
 <code>/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2400</code>
 
+![alt-text](src/Byte_Array.png)
+
 Copy this output to the "payload" field in the exploit.py script
 
 Restart the application in the Immunity Debugger and run the exploit.py script.
