@@ -106,7 +106,7 @@ This should bring up a window that will have several addresses to several "jmp e
 
 Pick an address and update the retn variable in the exploit.py file. 
 
-Note: Keep in mind the architecture of the host. If the host is running in little endian, then the address needs to be written backwards (i.e. if the address is 123456 then the little endian address would be 654321). Convert the address to HEX by adding a "\x" before every two characters (i.e. if the address is 123456 then the HEX version would be \x12\x34\x56). If we are running in little endian then the final address would be "\x65\x43\x21".
+Note: Keep in mind the architecture of the host. If the host is running in little endian, then the address needs to be written backwards (i.e. if the address is 123456 then the little endian address would be 654321). Convert the address to HEX by adding a "\x" before every two characters (i.e. if the address is 123456 then the HEX version would be \x12\x34\x56). If we are running in little endian then the final address would be "\x56\x34\x12".
 
 ## Generate the Payload
 
