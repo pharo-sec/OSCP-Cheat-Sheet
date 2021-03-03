@@ -1,16 +1,20 @@
 # Buffer Overflow
 
-[1. Fuzz the Application](#fuzz-the-application)
+[1. Quick Setup](#quick-setup)
+
+[2. Fuzz the Application](#fuzz-the-application)
   
-[2. Replicating the Crash and Controlling EIP](#replicating-the-crash-and-controlling-eip)
+[3. Replicating the Crash and Controlling EIP](#replicating-the-crash-and-controlling-eip)
 
-[3. Find Bad Characters](#finding-bad-characters)
+[4. Find Bad Characters](#finding-bad-characters)
 
-[4. Find the Jump Point](#find-the-jump-point) 
+[5. Find the Jump Point](#find-the-jump-point) 
 
-[5. Generate the Payload](#generate-the-payload)
+[6. Generate the Payload](#generate-the-payload)
 
-[6. Exploit](#exploit)
+[7. Exploit](#exploit)
+
+## Quick Setup
 
 Set a working directory for Mona from teh Immunity Debugger. Run the following command from the command line in Immunity Debugger
 
