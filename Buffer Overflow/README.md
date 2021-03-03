@@ -28,7 +28,7 @@ Click the red play button at the top of the window to execute the file
 
 ![alt-text](src/Running_State.png)
 
-Use the program located [here](fuzzer.py) to fuzz the application. It will send strings to the application incrementing by 500 characters each time until the app crashes or it reaches a string of length 3000.
+Use the program located [here](fuzzer.py) to fuzz the application. It will send strings to the application incrementing by 100 characters each time until the app crashes or it reaches a string of length 3000.
 
 <code>python fuzzer.py</code>
 
@@ -66,7 +66,7 @@ Mona will display a window with some output in the form of:
 
 ![alt-text](src/EIP_Offset.png)
 
-We will then need to update our exploit.py script and set the offset varialbe to the value of the offset. 
+We will then need to update our exploit.py script and set the offset variable to the value of the offset. 
 
 Set the retn variable to "BBBB"
 
