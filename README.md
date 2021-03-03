@@ -1,6 +1,6 @@
 # OSCP Cheat Sheet
 
-[1. Common Commands](#common-commands)
+1. [Common Commands](#common-commands)
  
     - [Downloading Files (Curl / Wget)](#downloading--uploading-files-curl--wget)
 
@@ -22,17 +22,17 @@
 
     - [UDP Scan](#udp-scan)
 
-[3. DNS](#dns)
+3. [DNS](#dns)
 
     - [Zone Transfer](#zone-transfer)
 
 [4. SMB/Samba](#smbsamba)
 
-[5. SNMP](#snmp)
+5. [SNMP](#snmp)
 
     - [MIB Values](#mib-values)
 
-[6. Web Servers](#web-servers)
+6. [Web Servers](#web-servers)
 
     - [Wordlists](#wordlists)
 
@@ -54,7 +54,7 @@
     
     - [Local File Inclusion / Remote File Inclusion](#local-file-inclusion--remote-file-inclusion-lfi--rfi)
 
-[7. FTP](#ftp)
+7. [FTP](#ftp)
 
     - [Bruteforce](#bruteforce-1)
 
@@ -62,9 +62,9 @@
 
     - [Upload](#upload)
 
-[8. Kerberos](#kerberos)
+8. [Kerberos](#kerberos)
 
-[9. SMB Exploitation](#smb-exploitation)
+9. [SMB Exploitation](#smb-exploitation)
 
     - [Eternal Blue (MS17-010)](#eternal-blue-ms17-010)
 
@@ -74,13 +74,13 @@
 
         - [Payloads](#payloads)
 
-[10. Linux Privilege Escalation](#linux-privilege-escalation)
+10. [Linux Privilege Escalation](#linux-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts)
 
     - [SUID Binaries](#suid-binaries)
 
-[11. Windows Privilege Escalations](#windows-privilege-escalation)
+11. [Windows Privilege Escalations](#windows-privilege-escalation)
 
     - [Enumeration Scripts](#enumeration-scripts-1)
 
@@ -96,7 +96,7 @@
 
         - [Windows XP SP0/SP1](#windows-xp-sp0sp1)
 
-[12. MSFvenom Payloads](#msfvenom-payloads)
+12. [MSFvenom Payloads](#msfvenom-payloads)
 
     - [Linux](#linux)
 
@@ -118,7 +118,7 @@
 
     - [Perl](#perl)
 
-[13. References](#references)
+13. [References](#references)
 
 ## Common Commands
 
