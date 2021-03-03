@@ -46,7 +46,7 @@ We then need to generate a string of the length of the string that crashed the a
 
 <code>/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2400</code>
 
-![alt-text](src/Byte_Array.png)
+![alt-text](src/Crash_String.png)
 
 Copy this output to the "payload" field in the exploit.py script
 
@@ -85,6 +85,8 @@ We will generate a bytearray with Mona (Excluding the "\x00" character). Run the
 <code>!mona bytearray -b "\x00"</code>
 
 Then, generate a string of bad characters that is identical to the bytearray. Use the python code [here](byte_array.py).
+
+![alt-text](src/Byte_Array.png)
 
 Update the payload variable in the exploit.py file with the byte array generated from the python code.
 
