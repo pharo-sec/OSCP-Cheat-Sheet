@@ -26,7 +26,7 @@
 
     - [Zone Transfer](#zone-transfer)
 
-[4. SMB/Samba](#smbsamba)
+4. [SMB/Samba](#smbsamba)
 
 5. [SNMP](#snmp)
 
