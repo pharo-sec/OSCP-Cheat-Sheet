@@ -16,7 +16,11 @@
 
 ## Quick Setup
 
-Set a working directory for Mona from teh Immunity Debugger. Run the following command from the command line in Immunity Debugger
+Install [Immunity Debugger](https://debugger.immunityinc.com/ID_register.py)
+
+Install [Mona](https://github.com/corelan/mona) (Move the mona.py file to the PyCommands file in Immunity Debugger)
+
+Set a working directory for Mona from the Immunity Debugger. Run the following command from the command line in Immunity Debugger:
 
 <code>!mona config -set workingfolder c:\mona\%p</code>
 
