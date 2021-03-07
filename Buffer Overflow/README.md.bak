@@ -28,7 +28,7 @@ Set a working directory for Mona from the Immunity Debugger. Run the following c
 
 ## Fuzz the Application
 
-Launch Immunity Debugger as Administrator, and use the "File -> Open" command to bring up the vulnerable application. Notice that this does not run the application, it still needs to be executed.  
+Launch Immunity Debugger as Administrator, and use the "File -> Open" command to bring up the vulnerable application. Notice that this does not run the aplication, it still needs to be executed.  
 
 ![alt-text](.src/Paused_State.png)
 
@@ -88,7 +88,7 @@ We should see the EIP register is now 42424242 (BBBB)
 
 ## Finding Bad Characters
 
-We will generate a bytearray with Mona (Excluding the "\x00" character). Run the following command in Immunity Debugger
+We will generate a bytearray with Mona (Excluding the "\x00" character). Run the following command in Imunity Debugger
 
 <code>!mona bytearray -b "\x00"</code>
 
@@ -120,7 +120,7 @@ Note: Keep a file of these bad characters, you will need them to find the jump p
 
 ## Find the Jump Point
 
-While the application is crashed or running run the following Mona command in Immunity Debugger with the list of bad characters found in the previous steps
+While the application is crashed or running run the following Mona command in Immunity Debugger with the list of bad caracters found in the previous steps
 
 <code>!mona jmp -r esp -cpb "\x00\xXX\xXX"</code>
 
