@@ -216,7 +216,7 @@ Hit Return 2x
 
 ### UDP Scan
 
-<code>nmap -sU -v -sS -sC -sV -T4 -Pn -oA nmap/[filename.udp] [IP]</code>
+<code>nmap -sU -v -sC -sV -T4 -Pn -oA nmap/[filename.udp] [IP]</code>
 
 ## DNS
 
