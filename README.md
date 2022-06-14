@@ -8,7 +8,9 @@
 
     - [Upload / Download Files with Netcat](#upload--download-files-with-netcat)
 
-    - [Upload / Download Files with SMB](#upload--download-files-with-smb)
+    - [Upload / Download Files with SMB](#upload--download-files-with-smb-windows)
+
+    -[Download Files with CertUtil (Windows)](#download-files-with-certutil-windows)
 
     - [Netcat](#netcat)
 
