@@ -512,7 +512,7 @@ Root User: <code>ps aux | grep root</code>
 - /etc/cron*
 - /etc/init.d
 - /etc/crontab
--  /etc/cron.allow
+- /etc/cron.allow
 - /etc/cron.d
 - /etc/cron.daily
 - /etc/cron.hourly
