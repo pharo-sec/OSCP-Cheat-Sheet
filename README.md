@@ -10,7 +10,7 @@
 
     - [Upload / Download Files with SMB](#upload--download-files-with-smb-windows)
 
-    -[Download Files with CertUtil (Windows)](#download-files-with-certutil-windows)
+    - [Download Files with CertUtil (Windows)](#download-files-with-certutil-windows)
 
     - [Netcat](#netcat)
 
@@ -99,6 +99,9 @@
     - [Service Exploitation](#service-exploitation)
 
         - [Windows XP SP0/SP1](#windows-xp-sp0sp1)
+
+    - [PrinterSpoofer]
+
 
 12. [MSFvenom Payloads](#msfvenom-payloads)
 
@@ -454,6 +457,55 @@ Use listener
 
 ## Linux Privilege Escalation
 
+### File Permisission
+
+- (r)ead = Read permission only allow the user to read the content.
+- (x)Execute = The user has permission to execute the program.
+- (w)Write = The user can modify or delete the file/program.
+- (s)SUID = File Executed with same privilege of the owner(For example root).
+- (s)SGID = File Executed with same privilege of the group
+
+### Gathering System Information
+
+Get kernel information: <code>uname -a</code>
+Get Host information: <code>hostname</code>
+Get current IP address: <code>ip add</code>
+
+### Check User Information and Common Files
+
+Current User: whoami
+List Users Bash Access: <code>cat /etc/passwd | grep bash</code>
+List User Groups: <code>cat /etc/group</code>
+Check Access to Restricted Files: <code>cat /etc/shadow</code>
+Check History Files: <code>cat ~/.bash_history</code>
+Search for Files Related to Passwords: <code>locate password | more</code>
+Search for Authorized SSH Keys: <code>find / -name authorized_keys 2&gt; /dev/null</code>
+Search for SSH Keys: <code>find / -name id_rsa 2&gt; /dev/null</code>
+
+### Enumerating Installed Software
+
+List Installed Software: <code>dpkg -l</code>
+Detailed Info on Software: <code>dpkg -l | grep [SOFTWARE_NAME]</code>
+
+### Enumerate Running Services
+
+Curernt User: <code>ps aux | grep [USER]</code>
+Root User: <code>ps aux | grep root</code>
+
+### Checking CRON Jobs
+
+- /etc/cron*
+- /etc/init.d
+- /etc/crontab
+-  /etc/cron.allow
+- /etc/cron.d
+- /etc/cron.daily
+- /etc/cron.hourly
+- /etc/cron.monthly
+- /etc/cron.weekly
+- /var/spool/cron
+- /var/spool/cron/crontabs
+
 ### Enumeration Scripts
 
 <code>LinPEAS.sh</code> Found [here](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
@@ -550,6 +602,24 @@ Starting / Stopping the Service
 <code>net start [SERVICE]</code>
 
 <code>net stop [SERVICE]</code>
+
+### PrintSpoofer
+
+Exploit can be found [here](https://github.com/itm4n/PrintSpoofer)([Pre-Compiled](https://github.com/dievus/printspoofer))
+
+#### Vulnerable OS Versions
+
+- Windows 10
+- Windows Server 2016
+- Windows Server 2019
+
+#### Required Permissions
+
+- <code>SeImpersonatePrivilege</code>
+
+#### Execution
+
+<code>PrintSpoofer.exe -i -c cmd</code>
 
 ## MSFvenom Payloads
 
