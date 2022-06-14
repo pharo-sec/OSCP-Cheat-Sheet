@@ -506,6 +506,8 @@ Root User: <code>ps aux | grep root</code>
 
 ### Checking CRON Jobs
 
+<code>crontab -l</code>
+
 - /etc/cron*
 - /etc/init.d
 - /etc/crontab
@@ -632,6 +634,15 @@ Exploit can be found [here](https://github.com/itm4n/PrintSpoofer)([Pre-Compiled
 #### Execution
 
 <code>PrintSpoofer.exe -i -c cmd</code>
+
+### Common Kernel Exploits
+
+-[MS16-014](https://www.exploit-db.com/exploits/40039) – applies to: Windows 7 SP1 x86
+- [MS16-016](https://www.exploit-db.com/exploits/39432) – ‘WebDAV’ applies to Windows 7 SP1 x86 (Build 7601)
+- [MS16-032](https://www.exploit-db.com/exploits/39719): Applies to Windows 7 x86/x64, Windows 8 x86/64, Windows 10, Windows Server 2008-2012 R2
+- CVE-2020-0796: applies to SMBv3 Enabled on Windows Operation Systems
+- [MS16-075](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS16-075)
+ - CVE-2019-1388
 
 ## MSFvenom Payloads
 
