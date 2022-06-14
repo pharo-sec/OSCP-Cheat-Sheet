@@ -80,6 +80,18 @@
 
 10. [Linux Privilege Escalation](#linux-privilege-escalation)
 
+    - [File Permission](#file-permisission)
+
+    - [Gathering System Information](#gathering-system-information)
+
+    - [Check User Information and Common Files](#check-user-information-and-common-files)
+
+    - [Enumerating Installed Software](#enumerating-installed-software)
+
+    - [Enumerate Running Services](#enumerate-running-services)
+
+    - [Checking CRON Jobs](#checking-cron-jobs)
+
     - [Enumeration Scripts](#enumeration-scripts)
 
     - [SUID Binaries](#suid-binaries)
